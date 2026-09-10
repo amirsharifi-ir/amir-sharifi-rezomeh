@@ -1,0 +1,412 @@
+@font-face {
+    font-family: 'BTitr';
+    src: url('https://cdn.fontcdn.ir/FontPersian/BTitr/BTitr.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'BYekan';
+    src: url('https://cdn.fontcdn.ir/FontPersian/BYekan/BYekan.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'BYekan';
+    src: url('https://cdn.fontcdn.ir/FontPersian/BYekan/BYekanBold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --bg-gradient: radial-gradient(circle at 20% 30%, #0f2b3d, #0a1a2a);
+    --container-bg: rgba(15, 43, 61, 0.65);
+    --container-border: rgba(56, 189, 248, 0.25);
+    --text-color: #e0f2fe;
+    --card-bg: rgba(15, 43, 61, 0.55);
+    --card-border: rgba(56, 189, 248, 0.2);
+    --skill-bg: rgba(15, 43, 61, 0.5);
+    --btn-bg: linear-gradient(135deg, #0ea5e9, #0284c7);
+    --btn-hover: linear-gradient(135deg, #0284c7, #0369a1);
+    --footer-border: rgba(56, 189, 248, 0.15);
+    --title-gradient: linear-gradient(135deg, #bae6fd, #38bdf8);
+    --project-title: #38bdf8;
+    --percent-color: #38bdf8;
+    --progress-bg: rgba(56, 189, 248, 0.25);
+    --blur-amount: 16px;
+    --card-blur: 12px;
+    --skill-blur: 8px;
+}
+
+body {
+    background: var(--bg-gradient);
+    font-family: 'BYekan', 'Inter', system-ui, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 1.5rem;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: var(--container-bg);
+    backdrop-filter: blur(var(--blur-amount));
+    border-radius: 1.8rem;
+    padding: 1.5rem 1.8rem;
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px var(--container-border);
+    border: 1px solid var(--container-border);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 1px solid var(--footer-border);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+}
+
+.name {
+    font-size: 2.4rem;
+    font-weight: 800;
+    background: var(--title-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+    font-family: 'Inter', 'BYekan', sans-serif;
+    margin-bottom: 0.3rem;
+}
+
+.job-title {
+    font-size: 1rem;
+    background: rgba(6, 182, 212, 0.12);
+    backdrop-filter: blur(8px);
+    display: inline-block;
+    padding: 0.35rem 1.3rem;
+    border-radius: 40px;
+    margin-top: 0.3rem;
+    font-weight: 500;
+    border-right: 2px solid #06b6d4;
+    color: var(--text-color);
+    font-family: 'Inter', 'BYekan', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+.about {
+    background: var(--card-bg);
+    backdrop-filter: blur(var(--card-blur));
+    padding: 1rem 1.5rem;
+    border-radius: 1.2rem;
+    margin-bottom: 1.8rem;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-right: 3px solid #06b6d4;
+    padding-right: 0.7rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'BYekan', 'Inter', sans-serif;
+}
+.section-title a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.section-title a:hover {
+    color: var(--percent-color);
+}
+
+.about-text {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    font-family: 'BYekan', 'Inter', sans-serif;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.skill-item {
+    background: var(--skill-bg);
+    backdrop-filter: blur(var(--skill-blur));
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--card-border);
+    direction: ltr;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    direction: ltr;
+    font-size: 0.95rem;
+    font-family: 'Inter', 'BYekan', monospace;
+}
+.skill-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: 'Inter', 'BYekan', sans-serif;
+}
+.skill-percent {
+    color: var(--percent-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: 'Inter', monospace;
+}
+.progress-bar-bg {
+    background-color: var(--progress-bg);
+    border-radius: 40px;
+    height: 6px;
+    overflow: hidden;
+}
+.progress-fill {
+    background: linear-gradient(90deg, #06b6d4, #38bdf8);
+    width: 0%;
+    height: 100%;
+    border-radius: 40px;
+    transition: width 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+.project-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(var(--card-blur));
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--card-border);
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+.project-card:hover {
+    border-color: #06b6d4;
+    background: rgba(6, 182, 212, 0.12);
+    transform: translateY(-2px);
+}
+.project-card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--project-title);
+    margin-bottom: 0.5rem;
+    font-family: 'BYekan', 'Inter', sans-serif;
+    text-align: right;
+    direction: rtl;
+}
+.project-card-description {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    opacity: 0.85;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+    font-family: 'BYekan', 'Inter', sans-serif;
+    text-align: right;
+    direction: rtl;
+}
+.project-card-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--btn-bg);
+    color: white;
+    padding: 0.55rem 1.3rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(6, 182, 212, 0.3);
+    border: none;
+    cursor: pointer;
+    font-family: 'BYekan', 'Inter', sans-serif;
+    margin-top: auto;
+    align-self: flex-start;
+}
+.project-card-link:hover {
+    background: var(--btn-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(6, 182, 212, 0.4);
+}
+
+/* بخش مطالب من (وبلاگ) - دو ستونه مثل مهارت‌ها */
+.posts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+.post-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(var(--card-blur));
+    border-radius: 1rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--card-border);
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+.post-card:hover {
+    border-color: #06b6d4;
+    background: rgba(6, 182, 212, 0.12);
+    transform: translateY(-2px);
+}
+.post-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.post-card-title {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: var(--project-title);
+    margin-bottom: 0.3rem;
+    font-family: 'BYekan', 'Inter', sans-serif;
+}
+.post-card-excerpt {
+    font-size: 0.75rem;
+    color: var(--text-color);
+    opacity: 0.85;
+    line-height: 1.5;
+    font-family: 'BYekan', 'Inter', sans-serif;
+}
+
+.contact-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(var(--card-blur));
+    border-radius: 1.2rem;
+    padding: 1rem 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--card-border);
+    transition: all 0.25s ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(6, 182, 212, 0.12);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-family: 'Inter', 'BYekan', monospace;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+.contact-item:hover {
+    background: rgba(6, 182, 212, 0.25);
+    transform: translateY(-2px);
+}
+.contact-icon {
+    font-size: 1.1rem;
+}
+.contact-text {
+    color: var(--text-color);
+    font-family: 'BYekan', 'Inter', sans-serif;
+}
+.contact-text a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: 'Inter', 'BYekan', sans-serif;
+}
+.contact-text a:hover {
+    color: var(--percent-color);
+    text-decoration: underline;
+}
+.contact-item-email {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(6, 182, 212, 0.12);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-family: 'Inter', 'BYekan', monospace;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    direction: ltr;
+}
+.contact-item-email:hover {
+    background: rgba(6, 182, 212, 0.25);
+    transform: translateY(-2px);
+}
+.phone-link {
+    color: var(--text-color);
+    text-decoration: none;
+    direction: ltr;
+    display: inline-block;
+    font-family: 'Inter', 'BYekan', monospace;
+}
+.phone-link:hover {
+    color: var(--percent-color);
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 1.8rem;
+    font-size: 0.75rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    border-top: 1px solid var(--footer-border);
+    padding-top: 1rem;
+    direction: ltr;
+    font-family: 'Inter', 'BYekan', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 1rem;
+    }
+    .container {
+        padding: 1rem 1.2rem;
+    }
+    .name {
+        font-size: 2rem;
+    }
+    .job-title {
+        font-size: 0.85rem;
+        padding: 0.3rem 1rem;
+    }
+    .section-title {
+        font-size: 1.2rem;
+    }
+    .skills-grid, .projects-grid, .posts-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    .about-text, .project-card-description {
+        font-size: 0.85rem;
+    }
+    .contact-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+    }
+    .contact-item, .contact-item-email {
+        justify-content: center;
+    }
+}
