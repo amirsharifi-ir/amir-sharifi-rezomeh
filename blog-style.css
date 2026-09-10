@@ -1,0 +1,288 @@
+/* تعریف فونت‌ها */
+@font-face {
+    font-family: 'BTitr';
+    src: url('https://cdn.fontcdn.ir/FontPersian/BTitr/BTitr.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'BYekan';
+    src: url('https://cdn.fontcdn.ir/FontPersian/BYekan/BYekan.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'BYekan';
+    src: url('https://cdn.fontcdn.ir/FontPersian/BYekan/BYekanBold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* فقط حالت شب (تیره) */
+body {
+    --bg-gradient: radial-gradient(circle at 20% 30%, #0f2b3d, #0a1a2a);
+    --container-bg: rgba(15, 43, 61, 0.65);
+    --container-border: rgba(56, 189, 248, 0.25);
+    --text-color: #e0f2fe;
+    --card-bg: rgba(15, 43, 61, 0.55);
+    --card-border: rgba(56, 189, 248, 0.2);
+    --skill-bg: rgba(15, 43, 61, 0.5);
+    --btn-bg: linear-gradient(135deg, #0ea5e9, #0284c7);
+    --btn-hover: linear-gradient(135deg, #0284c7, #0369a1);
+    --footer-border: rgba(56, 189, 248, 0.15);
+    --title-gradient: linear-gradient(135deg, #bae6fd, #38bdf8);
+    --project-title: #38bdf8;
+    --percent-color: #38bdf8;
+    --progress-bg: rgba(56, 189, 248, 0.25);
+    --blur-amount: 16px;
+    --card-blur: 12px;
+    --skill-blur: 8px;
+}
+
+body {
+    background: var(--bg-gradient);
+    font-family: 'BYekan', 'Inter', system-ui, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 1.5rem;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: var(--container-bg);
+    backdrop-filter: blur(var(--blur-amount));
+    border-radius: 1.8rem;
+    padding: 1.5rem 1.8rem;
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px var(--container-border);
+    border: 1px solid var(--container-border);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* دکمه بازگشت به خانه - سمت راست با ایموجی در انتها */
+.back-home {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    direction: ltr;
+}
+.back-home a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(6, 182, 212, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 50px;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: all 0.2s ease;
+    font-family: 'Inter', 'BYekan', sans-serif;
+}
+.back-home a:hover {
+    background: rgba(6, 182, 212, 0.3);
+    transform: scale(1.02);
+}
+
+.header {
+    text-align: center;
+    border-bottom: 1px solid var(--footer-border);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+}
+
+.name {
+    font-size: 2.4rem;
+    font-weight: 800;
+    background: var(--title-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+    font-family: 'Inter', 'BYekan', sans-serif;
+    margin-bottom: 0.3rem;
+}
+
+.job-title {
+    font-size: 1rem;
+    background: rgba(6, 182, 212, 0.12);
+    backdrop-filter: blur(8px);
+    display: inline-block;
+    padding: 0.35rem 1.3rem;
+    border-radius: 40px;
+    margin-top: 0.3rem;
+    font-weight: 500;
+    border-right: 2px solid #06b6d4;
+    color: var(--text-color);
+    font-family: 'Inter', 'BYekan', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-right: 3px solid #06b6d4;
+    padding-right: 0.7rem;
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'BYekan', 'Inter', sans-serif;
+}
+
+/* لیست مقالات */
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+.post-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(var(--card-blur));
+    border-radius: 1.2rem;
+    padding: 1.2rem 1.5rem;
+    border: 1px solid var(--card-border);
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+.post-card:hover {
+    border-color: #06b6d4;
+    background: rgba(6, 182, 212, 0.12);
+    transform: translateY(-2px);
+}
+.post-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--project-title);
+    margin-bottom: 0.5rem;
+    font-family: 'BYekan', 'Inter', sans-serif;
+}
+.post-excerpt {
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.85;
+    line-height: 1.6;
+    font-family: 'BYekan', 'Inter', sans-serif;
+}
+.read-more {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    color: var(--percent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    font-family: 'Inter', 'BYekan', sans-serif;
+}
+.read-more:hover {
+    transform: translateX(-4px);
+    text-decoration: underline;
+}
+
+/* صفحه نمایش مقاله (تک مقاله) */
+.single-post {
+    display: none;
+}
+.single-post.active {
+    display: block;
+}
+.posts-list.hide {
+    display: none;
+}
+.back-to-list {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(6, 182, 212, 0.15);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 50px;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: all 0.2s ease;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    font-family: 'Inter', 'BYekan', sans-serif;
+}
+.back-to-list:hover {
+    background: rgba(6, 182, 212, 0.3);
+    transform: scale(1.02);
+}
+.single-post-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--project-title);
+    margin-bottom: 0.5rem;
+    font-family: 'BYekan', 'Inter', sans-serif;
+}
+.single-post-content {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    font-family: 'BYekan', 'Inter', sans-serif;
+}
+.single-post-content p {
+    margin-bottom: 1rem;
+}
+.single-post-content h3 {
+    margin: 1.2rem 0 0.5rem 0;
+    color: var(--percent-color);
+}
+.single-post-content ul, .single-post-content ol {
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+}
+.single-post-content li {
+    margin-bottom: 0.3rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 1.8rem;
+    font-size: 0.75rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    border-top: 1px solid var(--footer-border);
+    padding-top: 1rem;
+    direction: ltr;
+    font-family: 'Inter', 'BYekan', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 1rem;
+    }
+    .container {
+        padding: 1rem 1.2rem;
+    }
+    .name {
+        font-size: 2rem;
+    }
+    .job-title {
+        font-size: 0.85rem;
+        padding: 0.3rem 1rem;
+    }
+    .section-title {
+        font-size: 1.2rem;
+    }
+    .single-post-title {
+        font-size: 1.3rem;
+    }
+    .back-home {
+        top: 0.8rem;
+        right: 1rem;
+    }
+}

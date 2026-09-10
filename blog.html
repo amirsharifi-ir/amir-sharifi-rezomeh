@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Amir Sharifi | Blog</title>
+    <meta name="description" content="آموزش نصب و راه‌اندازی وردپرس در هاست، تجربه طراحی سایت beanswheat.ir، راهنمای حرفه‌ای پروژه وردپرسی و مطالبی درباره برنامه‌نویسی، سئو و شبکه">
+    <meta name="keywords" content="آموزش وردپرس, نصب وردپرس, طراحی سایت, beanswheat, برنامه نویسی, سئو, پروژه وردپرسی">
+    <meta name="author" content="Amir Sharifi">
+    <!-- لوگوی سایت (favicon) - ایموجی 🌐 -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' font-size='80'%3E🌐%3C/text%3E%3C/svg%3E">
+    <!-- فونت اینتر برای انگلیسی -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="blog-style.css">
+</head>
+<body>
+<div class="container">
+    <div class="back-home">
+        <a href="index.html">بازگشت به خانه 🏠</a>
+    </div>
+
+    <div class="header">
+        <h1 class="name">Amir Sharifi</h1>
+        <div class="job-title">Web Developer</div>
+    </div>
+
+    <!-- لیست مقالات (آخرین مطلب در بالا) -->
+    <div id="postsList" class="posts-list">
+        <div class="section-title">📖 آخرین مطالب</div>
+        
+        <!-- مقاله 3: چگونه اولین پروژه وردپرسی خود را حرفه‌ای راه‌اندازی کنیم؟ (جدیدترین - اول) -->
+        <div class="post-card" data-post="3">
+            <div class="post-title">💡 چگونه اولین پروژه وردپرسی خود را حرفه‌ای راه‌اندازی کنیم؟</div>
+            <div class="post-excerpt">
+                راهنمای کامل از صفر تا صد راه‌اندازی اولین پروژه وردپرسی، انتخاب قالب مناسب، افزونه‌های ضروری، تنظیمات امنیتی و بهینه‌سازی سئو...
+            </div>
+            <a class="read-more">ادامه مطلب ←</a>
+        </div>
+
+        <!-- مقاله 2: تجربه طراحی beanswheat.ir -->
+        <div class="post-card" data-post="2">
+            <div class="post-title">🌾 تجربه طراحی سایت beanswheat.ir از صفر تا صد</div>
+            <div class="post-excerpt">
+                روایت تجربه شخصی من از طراحی و پیاده‌سازی سایت تخصصی حوزه کشاورزی و حبوبات با وردپرس؛ چالش‌ها، راهکارها و نکات کلیدی...
+            </div>
+            <a class="read-more">ادامه مطلب ←</a>
+        </div>
+
+        <!-- مقاله 1: آموزش نصب وردپرس -->
+        <div class="post-card" data-post="1">
+            <div class="post-title">🚀 آموزش نصب و راه‌اندازی وردپرس در هاست (گام به گام)</div>
+            <div class="post-excerpt">
+                آموزش کامل نصب وردپرس روی هاست‌های ایرانی و خارجی، تنظیمات اولیه، نکات امنیتی و بهینه‌سازی سرعت. مناسب برای مبتدیان...
+            </div>
+            <a class="read-more">ادامه مطلب ←</a>
+        </div>
+    </div>
+
+    <!-- صفحه نمایش تک مقاله (مخفی در ابتدا) -->
+    <div id="singlePost" class="single-post">
+        <div class="back-to-list" id="backToList">← بازگشت به لیست مطالب</div>
+        <div class="single-post-title" id="singleTitle"></div>
+        <div class="single-post-content" id="singleContent"></div>
+    </div>
+
+    <footer>
+        🧑‍💻 Amir Sharifi – Web Developer | 2026
+    </footer>
+</div>
+
+<script src="blog-script.js"></script>
+</body>
+</html>
